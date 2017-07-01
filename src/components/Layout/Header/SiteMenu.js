@@ -17,9 +17,17 @@ Item.propTypes = {
 const SiteMenu = () => (
   <ul className={styles.menu}>
     <li className={styles.menuItem}>
-      <a href="/time-and-salary">薪資工時</a>
+      <a href="/#section-form">開始參與</a>
     </li>
-    <Item to="/experiences/search" text="面試・工作經驗" />
+    <li className={styles.menuItem}>
+      <a href="/time-and-salary">查看薪時</a>
+    </li>
+    <li className={styles.menuItem}>
+      <a href="/#section-faq">常見問答</a>
+    </li>
+    <li className={styles.menuItem}>
+      <a href="/about">關於我們</a>
+    </li>
     <Item to="/labor-rights" text="勞動小教室" />
   </ul>
 );

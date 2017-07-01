@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import cn from 'classnames';
 import { Wrapper } from 'common/base';
 import i from 'common/icons';
@@ -66,9 +65,9 @@ class Header extends React.Component {
             toggle={this.toggleNav}
           />
           <div className={styles.logo}>
-            <Link to="/" title="goodjob 工時薪資透明化運動" onClick={this.closeNav}>
+            <a href="/" title="goodjob 工時薪資透明化運動" onClick={this.closeNav}>
               <i.GjLogo />
-            </Link>
+            </a>
           </div>
           <nav
             className={cn(styles.nav, { [styles.isNavOpen]: this.state.isNavOpen })}
@@ -76,9 +75,6 @@ class Header extends React.Component {
           >
             <SiteMenu />
             <div className={styles.buttonsArea}>
-              <Link to="/share" className={styles.leaveDataBtn}>
-                留下資料<i.ArrowGo />
-              </Link>
               {
                 this.props.auth.getIn(['user', 'name']) === null &&
                 <button className={styles.loginBtn} onClick={this.login}>
