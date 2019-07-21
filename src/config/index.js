@@ -10,4 +10,7 @@ module.exports = {
   SENTRY_DSN: process.env.RAZZLE_SENTRY_DSN,
   GIT_SHA1: process.env.RAZZLE_GIT_SHA1,
   PERSIST_KEY: process.env.PERSIST_KEY || 'goodjob',
+  GOOGLE_CLIENT_ID:
+    process.env.GOOGLE_CLIENT_ID ||
+    '879657963776-ksbuo26o2svuk8kv7qkmikm1kqqisrb5.apps.googleusercontent.com',
 };
