@@ -97,6 +97,7 @@ const questions = [
     title: '是否有以下特殊問題？',
     type: 'checkbox',
     dataKey: 'specialQuestions',
+    required: true,
     validator: value => !!value.length,
     warning: '錯誤訊息',
     options: [
@@ -105,14 +106,6 @@ const questions = [
       '曾要求繳交身分證、保證金',
       '其他',
     ],
-  },
-  {
-    header: jobTitleHeader,
-    title: '身份驗證',
-    description:
-      '若完成身份驗證，之後分享此份工作的任何資訊，獎勵都是 10 倍！可以拍下你此份工作的 名片/工作證/薪資單，或足以證明你在該公司上班的文件！',
-    type: 'file',
-    dataKey: 'verification',
   },
   {
     header: jobTitleHeader,
@@ -129,7 +122,6 @@ const questions = [
     description: 'Form Description',
     type: 'customized',
     dataKey: 'salaryWorkTime',
-    required: true,
     validator: value => !!value,
     warning: '錯誤訊息',
     renderCustomizedQuestion({ value: object, onChange, warning }) {
