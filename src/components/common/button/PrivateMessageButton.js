@@ -8,7 +8,7 @@ import styles from './PrivateMessageButton.module.css';
 const PrivateMessageButton = ({ className, onClick }) => (
   <Button btnStyle="blue" className={className} onClick={onClick}>
     <FontAwesomeIcon icon={faCommentDots} className={styles.msgButtonIcon} />
-    私訊原作者
+    私訊問內幕
   </Button>
 );
 
